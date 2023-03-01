@@ -1,3 +1,4 @@
+import Breadcrumb from '@components/Breadcrumb'
 import Sidebar from '@components/Sidebar'
 import './globals.css'
 
@@ -13,7 +14,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <div className='flex p-10'>
           <Sidebar />
 
-          <div>{children}</div>
+          <div>
+            <Breadcrumb />
+
+            {children}
+          </div>
         </div>
       </body>
     </html>
